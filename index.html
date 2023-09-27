@@ -5,17 +5,19 @@
     <title>maintenance</title>
     <style media="screen">
         body,  {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+
+
+
         }
 
-        h3, p {
-            text-align: center;
-            font-size: 20px;
-            
+        div {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          font-size: 20px;
+
         }
 
         /* Media query for screens with a maximum width of 768px (typical for tablets and smaller screens) */
@@ -27,11 +29,11 @@
 
             h3 {
                 margin: 0;
-                font-size: 24px; /* Increase text size for better readability */
+                font-size: 34px; /* Increase text size for better readability */
             }
 
             p {
-                font-size: 18px; /* Increase text size for better readability */
+                font-size: 28px; /* Increase text size for better readability */
             }
         }
     </style>
@@ -51,7 +53,9 @@
     </script>
 </head>
 <body>
+  <div>
     <h3>This website is under maintenance, we will be back shortly...</h3>
-    <p id="clock" style="font-size: 15px;">12:00:00</p>
+    <p id="clock">12:00:00</p>
+  </div>
 </body>
 </html>
