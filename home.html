@@ -26,7 +26,35 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:200,300,400,500,600,700,800&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
+<style media="screen">
+/* Default styles for larger screens */
+.navbar-nav.nav-dropdown > li {
+    display: block; /* Display items by default for larger screens */
+}
 
+/* Styles for smaller screens (e.g., tablet and mobile) */
+@media screen and (max-width: 767px) {
+    .navbar-nav.nav-dropdown > li {
+        display: none; /* Hide items by default for smaller screens */
+
+    }
+
+    /* Style the dropdown items */
+    .navbar-nav.nav-dropdown > li a {
+        padding: 10px 15px;
+        color: #333; /* Change to your desired text color */
+        text-decoration: none;
+        text-align: center;
+    }
+
+    /* Style the dropdown items on hover */
+    .navbar-nav.nav-dropdown > li:hover {
+        background-color: #ddd; /* Change to your desired hover background color */
+    }
+}
+
+
+</style>
 
 
 </head>
@@ -55,19 +83,19 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-						<a class="nav-link link text-info display-4" href="index.html#features04-3">Classes</a>
+						<a class="nav-link link text-info display-4" href="index.html">Classes</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link link text-info display-4" href="index.html#features04-5" aria-expanded="false">Shop</a>
+					<li class="nav-item show">
+						<a class="nav-link link text-info display-4" href="index.html" aria-expanded="false">Shop</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link link text-info display-4" href="index.html#contacts3-1">Contacts</a>
+					<li class="nav-item show">
+						<a class="nav-link link text-info display-4" href="index.html">Contacts</a>
 					</li></ul>
-				<div class="icons-menu">
+				<div class="icons-menu show">
 					<a class="iconfont-wrapper" href="tel:+233244245888">
 						<span class="p-2 mbr-iconfont mobi-mbri-phone mobi-mbri"></span>
 					</a>
-					<a class="iconfont-wrapper" href="">
+					<a class="iconfont-wrapper" href="mailto:meatsbutcherman@gmail.com">
 						<span class="p-2 mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
 					</a>
 					<a class="iconfont-wrapper" href="">
@@ -75,7 +103,7 @@
 					</a>
 
 				</div>
-				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-info display-4" href="index.html#form02-0">Meat Shop</a></div>
+				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-info display-4" href="index.html">Meat Shop</a></div>
 			</div>
 		</div>
 	</nav>
@@ -124,7 +152,7 @@
                 <h1 class="mbr-section-title mbr-fonts-style mb-4 display-5"><strong>What we do&nbsp;</strong></h1>
                 <p class="mbr-text mbr-fonts-style mb-4 display-7">
                   Welcome to Butcher Man Meats Enterprise, where quality meats meet uncompromising standards. At Butcher Man Meats, we take pride in providing you with a diverse selection of meats that not only satisfy your taste buds but also prioritize your health and well-being. Our mission is simple yet profound: to redefine your meat-buying experience. We understand the importance of trust when it comes to the food you put on your table, and that's why we go the extra mile to ensure the safety and purity of every product we offer.&nbsp;<br><br>At Butcher Man Meats, cleanliness and safety are not just buzzwords - they're the cornerstones of our operation. We maintain an impeccably clean and hygienic environment to meet the highest industry standards. Our team of experience butchers adheres to strict quality control measure, ensuring that every cut of meat is not only succulent and flavorful but also rigorously inspected for bacteria and disease-causing organisms. We source our meats from trusted suppliers, prioritizing ethical and sustainable practices to protect both the environment and your health.&nbsp;<br><br>By choosing Butcher Man Meats, you're choosing more than just a butcher - you're choosing a partner dedicated to your satisfaction and well-being. Whether you're a culinary enthusiast, a health-conscious consumer, or simply someone who appreciates top-notch meats, we invite you to explore our range of products. Come to us for exceptional taste and uncompromising quality. Thank you for making Butcher Man Meats your trusted source for premium meats.&nbsp;</p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-lg btn-info display-7" href="index.html#form02-0">Enter Meat Shop</a></div>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-lg btn-info display-7" href="index.html">Enter Meat Shop</a></div>
               </div>
             </div>
           </div>
@@ -205,5 +233,20 @@
         </div>
     </div>
 
+<script>
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuButton = document.querySelector('.navbar-toggler');
+    const dropdownItems = document.querySelectorAll('.navbar-nav.nav-dropdown > li');
+
+    menuButton.addEventListener('click', function () {
+        dropdownItems.forEach(item => {
+            item.classList.toggle('show');
+        });
+    });
+});
+
+</script>
   </body>
 </html>
