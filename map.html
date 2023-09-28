@@ -67,7 +67,7 @@
             document.getElementById("location").value = newLatitude + ", " + newLongitude;
 
             // Calculate and display the distance
-            var initialCoordinates = [6.67267, -1.6661504]; // Initial coordinates
+            var initialCoordinates = [6.711455, -1.635331]; // Initial coordinates
             var distance = calculateDistance(initialCoordinates, [newLatitude, newLongitude]);
             var cost = calculateCost(distance);
 
@@ -94,7 +94,7 @@
                         marker.bindPopup("Updated Marker Title").openPopup();
 
                         // Calculate and display the distance
-                        var initialCoordinates = [6.67267, -1.6661504]; // Initial coordinates
+                        var initialCoordinates = [6.711455, -1.635331]; // Initial coordinates
                         var distance = calculateDistance(initialCoordinates, [newLatitude, newLongitude]);
                         var cost = calculateCost(distance);
 
@@ -121,7 +121,7 @@
                     marker.bindPopup("My Location").openPopup();
 
                     // Calculate and display the distance
-                    var initialCoordinates = [6.67267, -1.6661504]; // Initial coordinates
+                    var initialCoordinates = [6.711455, -1.635331]; // Initial coordinates
                     var distance = calculateDistance(initialCoordinates, [newLatitude, newLongitude]);
                     var cost = calculateCost(distance);
 
@@ -176,14 +176,24 @@
         function calculateCost(distance) {
             if (distance < 2) {
                 return "₵" + (15).toFixed(2);
-            } else if (distance >= 2 && distance < 4) {
+            } else if (distance >= 2 && distance < 3) {
+                return "₵" + (20).toFixed(2);
+            } else if (distance >= 3 && distance < 4) {
                 return "₵" + (25).toFixed(2);
-            } else if (distance >= 4 && distance < 6) {
+            } else if (distance >= 4 && distance < 5) {
+                return "₵" + (30).toFixed(2);
+            } else if (distance >= 5 && distance < 7) {
+                return "₵" + (37).toFixed(2);
+            } else if (distance >= 7 && distance < 9) {
                 return "₵" + (40).toFixed(2);
-            } else {
+             } else if (distance >= 9 && distance < 11) {
+                 return "₵" + (46).toFixed(2);
+             } else if (distance >= 11 && distance < 14) {
+                 return "₵" + (50).toFixed(2);
+             } else {
                 // Handle distances greater than or equal to 6 miles
                 // You can add your own logic here if needed
-                return "We dont deliver accross cities";
+                return "Delivery will be negotiated since distance from store exceeds 14 miles";
             }
         }
     </script>
